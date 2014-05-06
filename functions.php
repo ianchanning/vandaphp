@@ -43,6 +43,6 @@ function redirect($view, $action = null) {
 	if (!is_null($action)) {
 		$url .= "&a=$action";
 	}
-	header("Location: $url");
+	exit(header("Location: $url"));
 }	
 ?>
