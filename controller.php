@@ -18,8 +18,6 @@
  * @lastmodified  $Date: 2012-03-02 16:40:01 +0100 (Fri, 02 Mar 2012) $
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
-require_once('model.php');
-
 class Controller {
 	public $modelName = '';
 	public $viewVars = array();
