@@ -6,4 +6,3 @@ class Gw3Controller extends Controller {
 		$this->set(compact('players', 'headers'));
 	}
 }
-?>	

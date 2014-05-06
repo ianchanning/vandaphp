@@ -44,5 +44,4 @@ function redirect($view, $action = null) {
 		$url .= "&a=$action";
 	}
 	exit(header("Location: $url"));
-}	
-?>
+}

@@ -35,7 +35,6 @@ $controller_obj->{$action}();
 extract($controller_obj->viewVars);
 
 ob_start();
-require_once('views'.DIRECTORY_SEPARATOR.$view.DIRECTORY_SEPARATOR.$action.'.php');	
+require_once('views'.DIRECTORY_SEPARATOR.$view.DIRECTORY_SEPARATOR.$action.'.php');
 $content_for_layout = ob_get_clean();
 require_once('views'.DIRECTORY_SEPARATOR.'layouts'.DIRECTORY_SEPARATOR.'default.php');
-?>

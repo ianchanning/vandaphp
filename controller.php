@@ -57,4 +57,3 @@ class Controller {
 		$this->{$model_class} = new $model_class($model_class);
 	}
 }
-?>	

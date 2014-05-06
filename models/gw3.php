@@ -14,4 +14,3 @@ class Gw3 extends Model {
 		return $player_headers;
 	}
 }
-?>	

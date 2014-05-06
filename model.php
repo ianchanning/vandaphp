@@ -33,9 +33,8 @@ class Model {
  *
  * @return array json decoded assoc array  
  */
-	public function get() {	
+	public function get() {
 		$json = file_get_contents('data'.DIRECTORY_SEPARATOR.$this->name.'.js');
 		return json_decode($json, true);
 	}
 }
-?>	
