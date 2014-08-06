@@ -27,14 +27,10 @@ $model 		= view_to_model($view);
 $controller	= $model.'Controller';
 
 require_once('model.php');
+require_once('view.php');
 require_once('controller.php');
 require_once('controllers'.DIRECTORY_SEPARATOR.$view.'_controller.php');
 
 $controller_obj = new $controller($model);
 $controller_obj->{$action}();
-extract($controller_obj->viewVars);
-
-ob_start();
-require_once('views'.DIRECTORY_SEPARATOR.$view.DIRECTORY_SEPARATOR.$action.'.php');
-$content_for_layout = ob_get_clean();
-require_once('views'.DIRECTORY_SEPARATOR.'layouts'.DIRECTORY_SEPARATOR.'default.php');
+$controller_obj->renderView($view, $action);
