@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHP version 5
  *
@@ -12,7 +13,7 @@
  * @copyright     Copyright 2011-2012, Ian Channing (http://ianchanning.com)
  * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
  * @package       vanda
- * @since         Vanda v 0.1.1
+ * @since         VandaPHP v 0.1.1
  * @version       $Revision: 8 $
  * @modifiedby    $LastChangedBy: icc97 $
  * @lastmodified  $Date: 2012-03-02 16:40:01 +0100 (Fri, 02 Mar 2012) $
@@ -21,16 +22,17 @@
 require_once('functions.php');
 session_start();
 
-$view 		= (isset($_GET['v'])) ? strtolower($_GET['v']) : 'pages';
-$action 	= (isset($_GET['a'])) ? strtolower($_GET['a']) : 'index';
-$model 		= view_to_model($view);
-$controller	= $model.'Controller';
+$view = (isset($_GET['v'])) ? strtolower($_GET['v']) : 'pages';
+$action = (isset($_GET['a'])) ? strtolower($_GET['a']) : 'index';
+$modelName = view_to_model($view);
+$model = '\\VandaPHP\\Models\\' . $modelName;
+$controller = '\\VandaPHP\\Controllers\\' . $modelName . 'Controller';
 
 require_once('model.php');
 require_once('view.php');
 require_once('controller.php');
-require_once('controllers'.DIRECTORY_SEPARATOR.$view.'_controller.php');
+require_once('controllers' . DIRECTORY_SEPARATOR . $view . '_controller.php');
 
-$controller_obj = new $controller($model);
+$controller_obj = new $controller($modelName);
 $controller_obj->{$action}();
 $controller_obj->renderView($view, $action);
