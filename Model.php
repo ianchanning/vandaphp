@@ -4,13 +4,13 @@
  * PHP version 5
  *
  * Vanda PHP (http://sourceforge.net/p/vandaphp/)
- * Copyright 2011-2012, Ian Channing
+ * Copyright 2011-2014, Ian Channing
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @filesource
- * @copyright     Copyright 2011-2012, Ian Channing (http://ianchanning.com)
+ * @copyright     Copyright 2011-2014, Ian Channing (http://ianchanning.com)
  * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1

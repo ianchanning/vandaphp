@@ -9,9 +9,4 @@ class PagesController extends \VandaPHP\Controller
     {
         
     }
-
-    public function redirect()
-    {
-        redirect('gw3');
-    }
 }
