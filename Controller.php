@@ -3,7 +3,7 @@
 /**
  * PHP version 5
  *
- * Vanda PHP (http://sourceforge.net/p/vandaphp/)
+ * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2014, Ian Channing
  *
  * Licensed under The MIT License
@@ -11,7 +11,7 @@
  *
  * @filesource
  * @copyright     Copyright 2011-2014, Ian Channing (http://ianchanning.com)
- * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
+ * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
  * @version       $Revision: 8 $
@@ -71,7 +71,7 @@ class Controller
      */
     public function loadModel($modelName = null)
     {
-        require_once 'models' . DIRECTORY_SEPARATOR . model_to_view($modelName) . '.php';
+        require_once 'Models' . DIRECTORY_SEPARATOR . model_to_view($modelName) . '.php';
 
         $this->modelNames[] = $modelName;
         $namespaceModelName = '\\VandaPHP\\Models\\' . $modelName;
@@ -88,9 +88,9 @@ class Controller
         extract($this->viewVars);
 
         ob_start();
-        require_once 'views' . DIRECTORY_SEPARATOR . $view . DIRECTORY_SEPARATOR . $action . '.php';
+        require_once 'Views' . DIRECTORY_SEPARATOR . $view . DIRECTORY_SEPARATOR . $action . '.php';
         $contentForLayout = ob_get_clean();
-
+        $this->view->title = ucfirst($view) . ' : ' . ucfirst($action);
         $this->view->render($contentForLayout, $this->layout);
     }
 }

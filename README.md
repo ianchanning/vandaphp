@@ -5,7 +5,7 @@ Vanda PHP is a bare-bones MVC PHP framework. It is almost entirely based on the 
 
 It is perfect to fit into existing code as at only around 80 lines of code it can be fitted in anywhere. It has been used multiple times in live environments to bring an MVC framework into new section inside existing code or to clean up existing spaghetti code.
 
-## Included from the CakePHP
+## Included from CakePHP
 
 * automatic hookup from `view -> controller -> model`
 * views, with variables generated in the controller

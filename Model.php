@@ -3,7 +3,7 @@
 /**
  * PHP version 5
  *
- * Vanda PHP (http://sourceforge.net/p/vandaphp/)
+ * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2014, Ian Channing
  *
  * Licensed under The MIT License
@@ -11,7 +11,7 @@
  *
  * @filesource
  * @copyright     Copyright 2011-2014, Ian Channing (http://ianchanning.com)
- * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
+ * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
  * @version       $Revision: 8 $
@@ -36,12 +36,9 @@ class Model
 
     /**
      * Get the model data
-     *
-     * @return array json decoded assoc array  
      */
     public function get()
     {
-        $json = file_get_contents('data' . DIRECTORY_SEPARATOR . $this->name . '.js');
-        return json_decode($json, true);
+        
     }
 }

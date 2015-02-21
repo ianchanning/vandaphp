@@ -1,3 +1,1 @@
-<h1>Welcome to Vanda PHP</h1>
-<?php
-// nothing here
+<h1><?php _e('Welcome to Vanda PHP'); ?></h1>
