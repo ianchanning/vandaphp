@@ -3,7 +3,7 @@
 /**
  * PHP version 5
  *
- * Vanda PHP (http://sourceforge.net/p/vandaphp/)
+ * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2012, Ian Channing
  *
  * Licensed under The MIT License
@@ -11,7 +11,7 @@
  *
  * @filesource
  * @copyright     Copyright 2011-2012, Ian Channing (http://ianchanning.com)
- * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
+ * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
  * @version       $Revision: 8 $
@@ -20,6 +20,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 require_once 'functions.php';
+date_default_timezone_set('UTC');
 session_start();
 
 $v = filter_input(INPUT_GET, 'v', FILTER_UNSAFE_RAW);
@@ -30,10 +31,10 @@ $modelName = view_to_model($view);
 $model = '\\VandaPHP\\Models\\' . $modelName;
 $controller = '\\VandaPHP\\Controllers\\' . $modelName . 'Controller';
 
-require_once 'model.php';
-require_once 'view.php';
-require_once 'controller.php';
-require_once 'controllers' . DIRECTORY_SEPARATOR . $view . '_controller.php';
+require_once 'Model.php';
+require_once 'View.php';
+require_once 'Controller.php';
+require_once 'Controllers' . DIRECTORY_SEPARATOR . ucfirst($view) . 'Controller.php';
 
 $controller_obj = new $controller($modelName);
 $controller_obj->{$action}();

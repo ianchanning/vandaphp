@@ -1,6 +1,6 @@
 The MIT License
 
-Vanda PHP (http://sourceforge.net/p/vandaphp/)
+Vanda PHP (https://github.com/ianchanning/vandaphp/)
 Copyright 2011-2012, Ian Channing
 
 Permission is hereby granted, free of charge, to any person obtaining a
