@@ -3,7 +3,7 @@
 /**
  * PHP version 5
  *
- * Vanda PHP (http://sourceforge.net/p/vandaphp/)
+ * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2014, Ian Channing
  *
  * Licensed under The MIT License
@@ -11,7 +11,7 @@
  *
  * @filesource
  * @copyright     Copyright 2011-2014, Ian Channing (http://ianchanning.com)
- * @link          http://sourceforge.net/p/vandaphp/ Vanda PHP
+ * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
  * @version       $Revision: 8 $
@@ -27,7 +27,11 @@ namespace VandaPHP;
  */
 class View
 {
-
+    /**
+     * @var string The layout title 
+     */
+    public $title;
+    
     /**
      * Create the output by combining content with the layout
      * 
@@ -36,6 +40,6 @@ class View
      */
     public function render($contentForLayout, $layout)
     {
-        require_once 'views' . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . $layout . '.php';
+        require_once 'Views' . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . $layout . '.php';
     }
 }
