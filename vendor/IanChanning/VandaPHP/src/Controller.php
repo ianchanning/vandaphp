@@ -18,7 +18,14 @@
 
 namespace IanChanning\VandaPHP;
 
-use View;
+/**
+ * N.B. This causes a fatal View class not found error if
+ * use View
+ * but as I understand it the namespace above should mean that use should be relative
+ * however I think that use doesn't use the namespace
+ * class Controller extends X would use the namespace 
+ */
+use IanChanning\VandaPHP\View;
 
 class Controller
 {
