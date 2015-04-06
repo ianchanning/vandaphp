@@ -1,8 +1,6 @@
 <?php
 
 /**
- * PHP version 5
- *
  * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2014, Ian Channing
  *
@@ -14,13 +12,11 @@
  * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
- * @version       $Revision: 8 $
- * @modifiedby    $LastChangedBy: icc97 $
- * @lastmodified  $Date: 2012-03-02 16:40:01 +0100 (Fri, 02 Mar 2012) $
+ * @modifiedby    $LastChangedBy: ianchanning $
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-namespace VandaPHP;
+namespace IanChanning\VandaPHP;
 
 class Model
 {

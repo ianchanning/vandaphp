@@ -1,3 +1,9 @@
+# Note to future self
+## 2015-02-21
+### Composer changes
+- these changes were based on the various composer structures seen in the Laravel Composer install
+- I'd need to get the namespaces to work properly
+
 # Vanda PHP
 *A bare-bones MVC PHP framework*
 

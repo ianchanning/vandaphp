@@ -1,8 +1,6 @@
 <?php
 
 /**
- * PHP version 5
- *
  * Vanda PHP (https://github.com/ianchanning/vandaphp/)
  * Copyright 2011-2014, Ian Channing
  *
@@ -14,13 +12,20 @@
  * @link          https://github.com/ianchanning/vandaphp/ Vanda PHP
  * @package       vanda
  * @since         VandaPHP v 0.1.1
- * @version       $Revision: 8 $
- * @modifiedby    $LastChangedBy: icc97 $
- * @lastmodified  $Date: 2012-03-02 16:40:01 +0100 (Fri, 02 Mar 2012) $
+ * @modifiedby    $LastChangedBy: ianchanning $
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-namespace VandaPHP;
+namespace IanChanning\VandaPHP;
+
+/**
+ * N.B. This causes a fatal View class not found error if
+ * use View
+ * but as I understand it the namespace above should mean that use should be relative
+ * however I think that use doesn't use the namespace
+ * class Controller extends X would use the namespace 
+ */
+use IanChanning\VandaPHP\View;
 
 class Controller
 {
@@ -71,10 +76,8 @@ class Controller
      */
     public function loadModel($modelName = null)
     {
-        require_once 'Models' . DIRECTORY_SEPARATOR . model_to_view($modelName) . '.php';
-
         $this->modelNames[] = $modelName;
-        $namespaceModelName = '\\VandaPHP\\Models\\' . $modelName;
+        $namespaceModelName = '\\Models\\' . $modelName;
         $this->{$modelName} = new $namespaceModelName($modelName);
     }
 
