@@ -1,8 +1,10 @@
 <?php
 
-namespace VandaPHP\Controllers;
+namespace Controllers;
 
-class PagesController extends \VandaPHP\Controller
+use IanChanning\VandaPHP\Controller;
+
+class PagesController extends Controller
 {
 
     public function index()

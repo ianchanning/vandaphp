@@ -1,8 +1,9 @@
 <?php
+namespace Models;
 
-namespace VandaPHP\Models;
+use IanChanning\VandaPHP\Model;
 
-class Pages extends \VandaPHP\Model
+class Pages extends Model
 {
     
 }
