@@ -36,15 +36,15 @@ function model_to_view($model)
 function redirect($view, $action = null)
 {
     if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
-        $protocol = 'http://';
+        $protocol = 'http';
     } else {
-        $protocol = 'https://';
+        $protocol = 'https';
     }
     /**
      * @var the root URL of the website
      * @link http://stackoverflow.com/a/3429657/327074 Get base directory of current script
      */
-    $baseUrl = $protocol . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']);
+    $baseUrl = $protocol . '://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']);
 
     $url = $baseUrl . "?v=$view";
     if (!is_null($action)) {
