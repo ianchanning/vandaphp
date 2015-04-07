@@ -12,4 +12,4 @@
 set_include_path(get_include_path() . PATH_SEPARATOR . 'app/');
 spl_autoload_register();
 
-require_once __DIR__ . '/vendor/ianchanning/vandaphp-core/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
