@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use IanChanning\VandaPHP\Controller;
+use Vanda\Controller;
 
 class PagesController extends Controller
 {
