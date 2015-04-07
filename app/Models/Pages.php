@@ -2,7 +2,7 @@
 
 namespace Models;
 
-use IanChanning\VandaPHP\Model;
+use Vanda\Model;
 
 class Pages extends Model
 {
