@@ -10,4 +10,4 @@
         text-align: center;
     };        
 </style>
-<h1><?php _e('Welcome to Vanda PHP'); ?></h1>
+<h1><?php echo $welcome; ?></h1>

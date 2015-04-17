@@ -16,20 +16,9 @@
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-date_default_timezone_set('UTC');
+require_once 'bootstrap.php';
 
-require_once 'autoload.php';
-require_once 'functions.php';
+use Vanda\Router;
 
-session_start();
-
-$v              = filter_input(INPUT_GET, 'v', FILTER_UNSAFE_RAW);
-$a              = filter_input(INPUT_GET, 'a', FILTER_UNSAFE_RAW);
-$view           = (!is_null($v)) ? strtolower($v) : 'pages';
-$action         = (!is_null($a)) ? strtolower($a) : 'index';
-$model          = view_to_model($view);
-$controller     = '\\Controllers\\' . $model . 'Controller';
-
-$controllerObj  = new $controller($model);
-$controllerObj->{$action}();
-$controllerObj->renderView($view, $action);
+$router = new Router();
+$router->dispatch();

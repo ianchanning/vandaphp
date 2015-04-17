@@ -9,6 +9,7 @@ class PagesController extends Controller
 
     public function index()
     {
-        
+        $welcome = __('Welcome to Vanda PHP');
+        $this->set(compact('welcome'));
     }
 }
